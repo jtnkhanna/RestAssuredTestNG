@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import com.google.common.io.Files;
 import com.restassured.constants.Constants;
-import com.restassured.utils.RandomUtils;
+import com.restassured.utils.TestUtils;
 
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.http.ContentType;
@@ -41,7 +41,7 @@ public class PostRequestsTests extends BaseTest{
 		HashMap<String, Object> requestParams = new HashMap<String, Object>();
 		requestParams.put("id", "55");
 		requestParams.put("title", "Activity 55");
-		requestParams.put("dueDate", RandomUtils.todaysDate());
+		requestParams.put("dueDate", TestUtils.todaysDate());
 		requestParams.put("completed", true);
 		
 		

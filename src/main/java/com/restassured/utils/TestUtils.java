@@ -3,11 +3,16 @@ package com.restassured.utils;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.lang.reflect.Method;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Base64;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
+import java.util.Locale;
+import java.util.TimeZone;
+
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -250,6 +255,14 @@ public class TestUtils {
 		return rownum;
 	}
 
+	public static String todaysDate() {    
+		//2022-01-19T11:02:07.426Z
+		Date date = new Date();
+		SimpleDateFormat formatObj = new SimpleDateFormat(
+				"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.US);
+		formatObj.setTimeZone(TimeZone.getTimeZone("UTC"));
+		return formatObj.format(date);
+	}
 	
 	public static String encode(String string) {
 		return Base64.getEncoder().encodeToString(string.getBytes());
