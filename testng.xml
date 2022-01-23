@@ -5,6 +5,7 @@
 	<listener class-name="com.restassured.listeners.ListenerClass"></listener>
 	<listener class-name="com.restassured.listeners.AnnotationTransformer"></listener>
 	</listeners>
+	
   <test name="Test" preserve-order = "true" thread-count="2" parallel = "methods">
     <classes>
       <class name="com.restassured.testcases.GetRequestsTests"/>
