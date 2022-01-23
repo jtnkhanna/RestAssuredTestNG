@@ -138,7 +138,7 @@ public class TestUtils {
 		else if(celltype==Cell.CELL_TYPE_NUMERIC || celltype==Cell.CELL_TYPE_FORMULA) {
 			temp=String.valueOf(cell.getNumericCellValue());
 		}
-		else if(celltype==cell.CELL_TYPE_BOOLEAN) {
+		else if(celltype==Cell.CELL_TYPE_BOOLEAN) {
 			temp=String.valueOf(cell.getBooleanCellValue());
 		}
 		else if(celltype==Cell.CELL_TYPE_ERROR) {

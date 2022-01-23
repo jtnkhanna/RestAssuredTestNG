@@ -11,9 +11,6 @@ import com.restassured.reports.ExtentReport;
 import com.restassured.reports.LogStatus;
 
 
-
-
-
 /*
  * Listener class which is implementing ITestListener and hence we can use this to dynamically create reports, write logs.
  */
@@ -21,7 +18,6 @@ public class ITestListenerClass implements ITestListener{
 	
 	private static String TestcaseName;
 
-	
 
 	public static String getTestcaseName() {
 		return TestcaseName;
