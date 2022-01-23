@@ -8,8 +8,8 @@
 	
   <test name="Test" preserve-order = "true" thread-count="2" parallel = "methods">
     <classes>
-      <class name="com.restassured.testcases.GetRequestsTests"/>
-      <class name="com.restassured.testcases.PostRequestsTests"/>
+    	<class name="com.restassured.testcases.PostRequestsTests"/>
+    	<class name="com.restassured.testcases.GetRequestsTests"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
